@@ -1,4 +1,5 @@
 package ElasticERL;
+
 //list
 public class NodeList<E> implements PositionList<E> {
 	int counter;
@@ -63,7 +64,7 @@ public class NodeList<E> implements PositionList<E> {
 		return prev;
 	}
 
-	public Position<E> next(Position<E> p){
+	public Position<E> next(Position<E> p) {
 		ListNode<E> v = checkPosition(p);
 		ListNode<E> next = v.getNext();
 		if (next == tail)
@@ -71,16 +72,14 @@ public class NodeList<E> implements PositionList<E> {
 		return next;
 	}
 
-	public Position<E> addBefore(Position<E> p, E element){
+	public Position<E> addBefore(Position<E> p, E element) {
 		ListNode<E> v = checkPosition(p);
 		counter++;
 		ListNode<E> newNode = new ListNode<E>(element, v, v.getPrev());
 		v.getPrev().setNext(newNode);
 		v.setPrev(newNode);
-		return v.getPrev()	;
+		return v.getPrev();
 	}
-	
-
 
 	public Position<E> addAfter(Position<E> p, E element) {
 		ListNode<E> v = checkPosition(p);
@@ -98,7 +97,6 @@ public class NodeList<E> implements PositionList<E> {
 		head.setNext(newNode);
 	}
 
-
 	public void addLast(E element) {
 		counter++;
 		ListNode<E> oldLast = tail.getPrev();
@@ -107,8 +105,7 @@ public class NodeList<E> implements PositionList<E> {
 		tail.setPrev(newNode);
 	}
 
-
-	public E remove(Position<E> p){
+	public E remove(Position<E> p) {
 		ListNode<E> v = checkPosition(p);
 		counter--;
 		ListNode<E> prev = v.getPrev();
@@ -121,16 +118,17 @@ public class NodeList<E> implements PositionList<E> {
 		return vElem;
 	}
 
-	public E set(Position<E> p, E element){
+	public E set(Position<E> p, E element) {
 		ListNode<E> v = checkPosition(p);
 		E oldVal = v.getElement();
 		v.setElement(element);
 		return oldVal;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "NodeList [ counter=" + counter + ", head=" + head.getNext().getElement() + ", tail=" + tail.getPrev().getElement() + "]";
+		return "NodeList [ current=" + null + ", counter=" + counter + ", head=" + head.getNext().getElement()
+				+ ", tail=" + tail.getPrev().getElement() + "]";
 	}
 
 	public static void main(String[] args) {
@@ -147,5 +145,15 @@ public class NodeList<E> implements PositionList<E> {
 		System.out.println(p.getElement().toString());
 		System.out.println(a.toString());
 	}
-}
 
+	public ListNode<Integer> mergeSort(ListNode<Integer> p) {
+		// TODO Auto-generated method stub
+		return p;
+	}
+
+	public void printList(ListNode<Integer> p) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
