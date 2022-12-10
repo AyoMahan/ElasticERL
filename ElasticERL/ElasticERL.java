@@ -209,18 +209,17 @@ public class ElasticERL {
 		
 
 		// remove() demo
-		add(list, 123, "Testing");
-		System.out.println(list.tail.getPrev().getElement().toString());
-		System.out.println(list.tail.getPrev().getValue());
-		int value = remove(list, 123);
-		System.out.println("key " + value + " was removed");
+//		add(list, 123, "Testing");
+//		int value = remove(list, 123);
+//		System.out.println("key " + value + " was removed");
 		
 		// getValues() demo
-		String strVal = getValues(list, 33240013);
-		System.out.println("The value of the key is: " + strVal);
-		add(list, 1234, "Value of node with key 1234");
-		String strVal2 = getValues(list, 1234);
-		System.out.println("The value of the key is: " + strVal2);
+		//System.out.println(p.getElement().toString());
+//		String strVal = getValues(list, 33240013);
+//		System.out.println("The value of the key is: " + strVal);
+//		add(list, 1234, "Value of node with key 1234");
+//		String strVal2 = getValues(list, 1234);
+//		System.out.println("The value of the key is: " + strVal2);
 		
 		// rangekey() demo
 		System.out.println(p.getElement().toString());
